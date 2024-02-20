@@ -1,0 +1,188 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+}
+
+body {
+	background-color: black;
+}
+
+.alerta_erro {
+	display: none;
+	justify-content: flex-end;
+	position: absolute;
+	top: 10%;
+	height: auto;
+	width: 20%;
+	margin: 0 40%;
+}
+
+.card_erro {
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.95);
+	color: var(--cor-fonte-secundaria);
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	border: white 1px solid;
+	padding: 20px 20px;
+}
+
+.card_erro #mensagem_erro {
+	font-weight: 500;
+	font-size: 13px;
+}
+.botao_voltar {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 5%;
+	left: 2%;
+	height: 40px;
+	width: 40px;
+	border-radius: 5px;
+	/* border: 1px solid #211e1e;
+	background-color: #131212; */
+}
+.botao_voltar:hover {
+	cursor: pointer;
+}
+.botao_voltar img {
+	height: 35px;
+	filter: invert(100%);
+}
+
+#logo {
+	width: 10%;
+	height: auto;
+	margin-top: 4%;
+	margin-left: 26%;
+}
+
+.video_de_fundo {
+	height: 113vh;
+	width: 31%;
+	border-radius: 10px, 10px, 10px, 10px;
+	position: fixed;
+	right: 8%;
+	top: -15vh;
+	filter: brightness(150%);
+	transform: scaleX(-1);
+}
+
+h1 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	margin-left: 16.5%;
+}
+
+h2 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 10px;
+	margin-left: 16.5%;
+}
+
+h3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 40px;
+	margin-left: 16.5%;
+}
+
+.campos_de_entrada {
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgb(200, 200, 200);
+	padding-bottom: 1px;
+	margin-top: 10px;
+	margin-left: 16.5%;
+	width: 30%;
+}
+
+.campos_de_entrada::placeholder {
+	color: rgb(200, 200, 200);
+}
+
+h4 {
+	color: #bf9460;
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	align-items: center;
+	margin-top: 15px;
+	margin-left: 16.5%;
+}
+
+h5 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 15px;
+	margin-left: 21%;
+}
+
+#botao_logar {
+	font-family: "Montserrat", sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	display: flex;
+	width: 30%;
+	padding: 14px 184px;
+	justify-content: center;
+	gap: 10px;
+	border-radius: 15px;
+	background: #730217;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+	opacity: 0.8;
+	margin-top: 20px;
+	margin-left: 16.5%;
+}
+
+#botao_logar:hover {
+	background-color: rgb(97, 2, 19);
+	cursor: pointer;
+}
+
+#botao_logar:active {
+	background-color: #260101;
+}
+
+a {
+	color: #bf9460;
+	text-decoration: none;
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+a:hover {
+	color: rgb(178, 115, 38);
+}

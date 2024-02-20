@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/cadastro.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+			rel="stylesheet" />
+		<title>Cadastro - WineTech</title>
+		<link
+			rel="icon"
+			href="../Pagina-Principal/imagens/Logo/Logo Wine Tech NoBG.png" />
+	</head>
+
+	<body>
+		<header>
+			<div class="alerta_erro" id="alertaErro">
+				<div class="card_erro" id="cardErro">
+					<span id="mensagem_erro"></span>
+				</div>
+			</div>
+			<div class="botao_voltar">
+				<img
+					src="assets/imagensCadastro/voltar.png"
+					alt="seta para voltar à tela login"
+					onclick="toLogin()" />
+			</div>
+			<picture>
+				<a href="../Pagina-Principal/index.html">
+					<img
+						src="assets/imagensCadastro/logo-wine-tech-versao-white-1.png"
+						alt="Logo da WineTech"
+						id="logo" />
+				</a>
+			</picture>
+		</header>
+
+		<main>
+			<div id="tabela_de_cadastro">
+				<h1>Cadastre-se</h1>
+				<h2>Informe seus dados e crie uma senha</h2>
+				<input
+					type="text"
+					class="campo_de_dados"
+					placeholder="Nome Completo"
+					id="input_nome" />
+				<!-- <input type="text" class="campo_de_dados" placeholder="Responsável" id="input_responsavel"> -->
+				<input
+					type="text"
+					class="campo_de_dados"
+					placeholder="Celular"
+					id="input_telefone_responsavel" />
+				<input
+					type="text"
+					class="campo_de_dados"
+					placeholder="CNPJ"
+					id="input_cnpj" />
+				<input
+					type="text"
+					class="campo_de_dados"
+					placeholder="E-mail"
+					id="input_email" />
+				<input
+					type="text"
+					class="campo_de_dados"
+					placeholder="Criar senha"
+					id="input_senha" />
+				<input
+					type="text"
+					class="campo_de_dados"
+					placeholder="Confirmar senha"
+					id="input_confirmacao_senha" />
+				<button onclick="cadastrar()" id="botao_cadastrar">Cadastrar</button>
+				<h5>Precisa de ajuda? <a href="https://app.pipefy.com/public/form/8M_Z2IPW" target="_blank" rel="noopener noreferrer">Fale conosco</a></h5>
+			</div>
+		</main>
+	</body>
+	<script src="./js/cadastro.js"></script>
+</html>

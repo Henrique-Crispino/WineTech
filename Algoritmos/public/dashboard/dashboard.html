@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/dashboard.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet" />
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<div class="alerta" id="alerta">
+			<div class="close_alerta" onclick="fechar_alerta()">X</div>
+			<img src="../assets/ImagensDashboard/alerta.png" id="imagem_alerta" />
+		</div>
+		<header>
+			<div class="nome_adega">
+				<h1>XV de Novembro</h1>
+			</div>
+
+			<div class="container_menu" onclick="ver_menu()">
+				<h3>MENU</h3>
+				<i class="ph ph-list"></i>
+			</div>
+		</header>
+
+		<main>
+			<div class="container_geral">
+				<div class="container_3">
+					<div class="container_grafico_velo">
+						<div class="texto_grafico_velo">
+							<h3>Temperatura atual:</h3>
+							<h2>
+								<span id="kpi_bar_temp"></span>
+								<img
+									src="../assets/ImagensDashboard/marker.png"
+									id="marcador_temp"
+									class="marcador_kpi" />
+								<span><span id="tempAtual"></span> °C</span>
+							</h2>
+							<!-- <canvas id="velo_temperatura" height="80"></canvas> -->
+						</div>
+					</div>
+
+					<div class="container_grafico_velo">
+						<div class="texto_grafico_velo">
+							<h3>Umidade atual:</h3>
+							<h2>
+								<span id="kpi_bar_umid"></span>
+								<img
+									src="../assets/ImagensDashboard/marker.png"
+									id="marcador_umid"
+									class="marcador_kpi" />
+								<span><span id="umidAtual"></span> %</span>
+							</h2>
+							<!-- <canvas id="velo_umidade" width="80" height="80"></canvas> -->
+						</div>
+					</div>
+
+					<div class="container_chamados">
+						<h3>Visão total dos alertas críticos</h3>
+
+						<div class="container_graficos_chamados">
+							<div class="graficos_chamados">
+								<canvas
+									id="grafico_coluna_chamado"
+									width="150"
+									height="80"></canvas>
+							</div>
+
+							<div class="graficos_chamados">
+								<canvas
+									id="grafico_pizza_chamado"
+									width="150"
+									height="80"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container_ocorrencias">
+					<div class="container_painel">
+						<div class="painel_ocorrencias">
+							<div class="titulo_ocorrencias">
+								<h2>Painel de alertas críticos</h2>
+							</div>
+
+							<div class="info_ocorrencias">
+								<div class="ocorrencias">
+									<div class="texto_ocorrencias">
+										<h4>Data/Hora:</h4>
+									</div>
+									<div class="linhas_ocorrencias" id="linhas_data_hora"></div>
+								</div>
+
+								<div class="ocorrencias">
+									<div class="texto_ocorrencias">
+										<h4>ID da ocorrência:</h4>
+									</div>
+									<div class="linhas_ocorrencias" id="linhas_id"></div>
+								</div>
+
+								<div class="ocorrencias">
+									<div class="texto_ocorrencias">
+										<h4>Temperatura:</h4>
+									</div>
+									<div class="linhas_ocorrencias" id="linhas_temperatura"></div>
+								</div>
+
+								<div class="ocorrencias">
+									<div class="texto_ocorrencias">
+										<h4>Umidade</h4>
+									</div>
+									<div class="linhas_ocorrencias" id="linhas_umidade"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container_grafico_ocorrencia">
+						<h2>Alertas críticos nos últimos 07 dias</h2>
+						<div class="div_grafico_ocorrencia">
+							<canvas id="grafico_ocorrencia" width="300" height="80"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<div class="container_kpis">
+					<div class="kpis">
+						<h3>Temperatura mínima:</h3>
+						<h2><span id="tempMin">12</span> °C</h2>
+						<h4>(Hoje)</h4>
+					</div>
+
+					<div class="kpis">
+						<h3>Temperatura máxima:</h3>
+						<h2><span id="tempMax">18</span> °C</h2>
+						<h4>(Hoje)</h4>
+					</div>
+
+					<div class="kpis">
+						<h3>Umidade miníma:</h3>
+						<h2><span id="umidMin">70</span> %</h2>
+						<h4>(Hoje)</h4>
+					</div>
+
+					<div class="kpis">
+						<h3>Umidade máxima:</h3>
+						<h2><span id="umidMax">80</span> %</h2>
+						<h4>(Hoje)</h4>
+					</div>
+				</div>
+
+				<div class="container_menu_bar">
+					<div class="container_itens_menu">
+						<div class="fechar_menu" onclick="fechar_menu()">
+							<p>Fechar <i class="ph-light ph-x"></i></p>
+						</div>
+
+						<div class="img_perfil">
+							<img
+								src="../assets/ImagensDashboard/logo-wine-tech-versao-white.png"
+								style="width: 125px" />
+							<h3>XV de Novembro</h3>
+						</div>
+
+						<div class="select_adegas">
+							<select id="select_adegas" onchange="trocarAdega(this)"></select>
+						</div>
+
+						<div class="ajuda">
+							<h3>Precisa de ajuda?</h3>
+							<a href="https://app.pipefy.com/public/form/8M_Z2IPW"
+								>Clique Aqui!</a
+							>
+						</div>
+
+						<div class="div_sair">
+							<h4 onclick="sair()">SAIR</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
+
+<script src="../js/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

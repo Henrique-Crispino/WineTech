@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>WineTech</title>
+	<link rel="icon" href="assets/imagensPaginaPrincipal/Logo/Logo Wine Tech NoBG.png">
+
+	<!-- importação do CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- importação das fontes -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?
+		family=Montserrat:wght@400;500;700&
+		family=Bona+Nova:ital,wght@0,400;0,700;1,400&
+		family=Dancing+Script:wght@400;500;600;700&display=swap"
+		rel="stylesheet" />
+</head>
+
+<body>
+	<div id="modal_tipo_vinhos">
+		<div class="container_tipo_vinhos" id="container_tipos">
+			<img src="" id="imagem_tipo_vinho">
+			<div id="sobre_tipo_vinho">
+				<span id="close_modal_vinhos" onclick="fechar_modais()">X</span>
+				<div id="tipo_uva"></div>
+				<br>
+				<p id="tipo_vinho"></p>
+				<p id="temperatura_servico"></p>
+				<p id="harmonizacao_vinho"></p>
+			</div>
+		</div>
+	</div>
+	<div id="modal">
+		<div id="fechar_modal_simulador" onclick="fechaModal()">X</div>
+		<div id="bottle">
+			<img src="assets/imagensPaginaPrincipal/Simulador-Financeiro/Garrafa-esvaziando/0.png" id="garrafa-tras"
+				onclick="chamaModal()" />
+			<img src="assets/imagensPaginaPrincipal/Simulador-Financeiro/Garrafa-esvaziando/0.png" id="garrafa-frente"
+				onclick="chamaModal()" />
+		</div>
+	</div>
+	<!-- <div id="container_texto_simulador"> -->
+	<div id="texto_simulador">
+		<div id="line01" class="lines">
+			<div id="text01" class="">
+			</div>
+		</div>
+		<div id="line02" class="lines">
+			<div id="text02" class="">
+			</div>
+		</div>
+		<div id="line03" class="lines">
+			<div id="text03" class="">
+			</div>
+		</div>
+		<div id="line04" class="lines">
+			<div id="text04" class="">
+			</div>
+		</div>
+		<div id="line05" class="lines">
+			<input id="text05" class="inputLine"></input>
+		</div>
+		<div id="line06" class="lines">
+			<div id="text06" class="">
+			</div>
+		</div>
+		<div id="line07" class="lines">
+			<div id="text07" class="">
+			</div>
+		</div>
+		<div id="line08" class="lines">
+			<input id="text08" class="inputLine"></input>
+		</div>
+		<div id="line09" class="lines">
+			<div id="text09" class="">
+			</div>
+		</div>
+		<div id="line10" class="lines">
+			<div id="text10" class="">
+			</div>
+		</div>
+		<div id="line11" class="lines">
+			<div id="text11" class="">
+			</div>
+		</div>
+		<div id="line12" class="lines">
+			<input id="text12" class="inputLine"></input>
+		</div>
+		<div id="line13" class="lines">
+			<div id="text13" class="">
+			</div>
+		</div>
+		<div id="line14" class="lines">
+			<div id="text14" class="">
+			</div>
+		</div>
+		<div id="line15" class="lines">
+			<input id="text15" class="inputLine"></input>
+		</div>
+		<div id="line16" class="lines">
+			<div id="text16" class="">
+			</div>
+		</div>
+		<div id="line17" class="lines">
+			<div id="text17" class="">
+			</div>
+		</div>
+		<div id="line18" class="lines">
+			<input id="text18" class="inputLine"></input>
+		</div>
+		<div id="line19" class="lines">
+			<div id="text19" class="">
+			</div>
+		</div>
+		<div id="line20" class="lines">
+			<div id="text20" class="">
+			</div>
+		</div>
+		<div id="line21" class="lines">
+			<div id="text21" class="">
+			</div>
+		</div>
+		<div id="line22" class="lines">
+			<input id="text22" class="inputLine"></input>
+		</div>
+		<div id="line23" class="lines">
+			<div id="text23" class="">
+			</div>
+		</div>
+		<div id="line24" class="lines">
+			<div id="text24" class="">
+			</div>
+		</div>
+		<div id="line25" class="lines">
+			<div id="text25" class="">
+			</div>
+		</div>
+		<div id="line26" class="lines">
+			<div id="text26" class="">
+			</div>
+		</div>
+		<div id="line27" class="lines">
+			<div id="text27" class="">
+			</div>
+		</div>
+		<div id="line28" class="lines">
+			<div id="text28" class="">
+			</div>
+		</div>
+		<div id="line29" class="lines">
+			<div id="text29" class="">
+			</div>
+		</div>
+		<div id="line30" class="lines">
+			<div id="text30" class="">
+			</div>
+		</div>
+		<div id="line31" class="lines">
+			<div id="text31" class="">
+			</div>
+		</div>
+		<div id="line32" class="lines">
+			<input id="text32" class="inputLine"></input>
+		</div>
+		<div id="line33" class="lines">
+			<input id="text33" class="inputLine"></input>
+		</div>
+		<div id="line34" class="lines">
+			<input id="text34" class="inputLine"></input>
+		</div>
+	</div>
+	</div>
+	<div id="modal_controle_adega">
+		<div class="container_controle_adega" id="container_controle" >
+			<div id="fechar_modal_adega" onclick="fechar_modais()">X</div>
+			<div id="sobre_controle">
+				O controle preciso de temperatura e umidade desempenha um papel fundamental no processo de maturação do
+				vinho em salas de barrica.
+				<br>
+				Primeiramente, a temperatura afeta diretamente a velocidade e a natureza das reações químicas que
+				ocorrem durante o envelhecimento do vinho. Manter a temperatura dentro de uma faixa específica permite
+				que os compostos presentes no vinho se desenvolvam de maneira equilibrada, resultando em um produto
+				final com aromas e sabores mais complexos e harmoniosos.
+				<br>
+				A temperatura inadequada pode acelerar ou retardar a maturação, comprometendo a qualidade do vinho.
+				<br>
+				<br>
+				Além disso, a umidade desempenha um papel crucial na prevenção de problemas como a evaporação excessiva
+				do vinho das barricas, o que pode levar à perda de volume e, consequentemente, à concentração indesejada
+				de sabores e aromas.
+				<br>
+				Manter um nível adequado de umidade também é essencial para evitar a entrada de oxigênio, que pode
+				causar oxidação do vinho e prejudicar sua qualidade.
+				<br>
+				Portanto, o controle rigoroso da umidade ajuda a preservar a integridade do vinho durante o processo de
+				maturação, garantindo que ele alcance seu potencial máximo.
+				<br>
+				<br>
+				Em resumo, o controle de temperatura e umidade em salas de barrica é crucial para garantir a qualidade e
+				a consistência do vinho durante o processo de maturação.
+				<br>
+				A combinação desses fatores permite que os enólogos tenham um controle preciso sobre o desenvolvimento
+				do vinho, assegurando que ele atinja seu potencial máximo em termos de complexidade aromática e sabor,
+				tornando-se uma verdadeira expressão da região e da uva de origem.
+			</div>
+		</div>
+	</div>
+	<div class="opacity">
+		<div id="header">
+			<div class="logo" href="#header">
+				<img src="assets/imagensPaginaPrincipal/Logo/logo-wine-tech-versao-white-1.png" />
+			</div>
+			<div class="nav_bar">
+				<!-- <a class="nav_home" href="#intro">HOME</a> -->
+				<a class="nav_sobre_nos" href="#sobre_nos">SOBRE NÓS</a>
+				<a class="nav_controle_vinhos" href="#controle_vinhos">CONTROLE DE VINHOS</a>
+				<a class="nav_fale_conosco" href="#fale_conosco">FALE CONOSCO</a>
+			</div>
+			<div class="midias">
+				<div class="login" onclick="tela_login()">ENTRAR</div>
+			</div>
+		</div>
+		<div id="intro">
+			<h2>CONTROLE DE TEMPERATURA E UMIDADE</h2>
+			<p>
+				"Nós da WineTech visamos sofisticar, monitorar e aprimorar os armazéns
+				de vinho dos nossos clientes trazendo a tecnologia para o tradicional,
+				fazendo com que exista um bom rendimento e uma alta qualidade dos
+				produtos."
+			</p>
+			<button class="saiba_mais" onclick="controle_temperatura()">SAIBA MAIS</button>
+		</div>
+		<div id="sobre_nos">
+			<h2>A WineTech</h2>
+			<h4>Monitoria de Vinhos</h4>
+			<p>
+				A WineTech é uma empresa de tecnologia com a Missão de aprimorar a arte da vinificação, garantindo que
+				produtores de vinho tenham controle preciso sobre a temperatura e umidade das suas salas de barrica.
+				<br /><br /><br />
+				Estamos comprometidos em criar soluções tecnológicas avançadas que potencializam o envelhecimento e a
+				maturação do vinho, permitindo que nossos clientes alcancem a excelência na produção de vinhos de
+				qualidade excepcional.
+			</p>
+			<img src="assets/imagensPaginaPrincipal/about-us.png" alt="" />
+		</div>
+		<div id="controle_vinhos">
+			<h1>Controle de Vinhos</h1>
+			<div class="secao_controle">
+				<div class="wine-item" onclick="sobre_vinhos(`Cabernet Sauvignon`)">
+					<img src="assets/imagensPaginaPrincipal/tipos-vinho/cabernet-sauvignon.png" alt="Garrafa 1" />
+					<p class="wine-name">CABERNET SAUVIGNON</p>
+					<p class="wine-type">Vinho Tinto</p>
+				</div>
+
+				<div class="wine-item" onclick="sobre_vinhos(`Chardonnay`)">
+					<img src="assets/imagensPaginaPrincipal/tipos-vinho/chardonnay.png" alt="Garrafa 2" />
+					<p class="wine-name">CHARDONNAY</p>
+					<p class="wine-type">Vinho Branco</p>
+				</div>
+				<div class="wine-item" onclick="sobre_vinhos(`Rosé de Provence`)">
+					<img src="assets/imagensPaginaPrincipal/tipos-vinho/rose-de-provence.png" alt="Garrafa 3" />
+					<p class="wine-name">ROSÉ DE PROVENCE</p>
+					<p class="wine-type">Vinho Rosé</p>
+				</div>
+				<div class="wine-item" onclick="sobre_vinhos(`Prosecco`)">
+					<img src="assets/imagensPaginaPrincipal/tipos-vinho/prosecco.png" alt="Garrafa 4" />
+					<p class="wine-name">PROSECCO</p>
+					<p class="wine-type">Vinho Espumante</p>
+				</div>
+			</div>
+
+			<div class="secao_controle">
+				<div class="wine-item" onclick="sobre_vinhos(`Pinot Noir`)">
+					<img src="assets/imagensPaginaPrincipal/tipos-vinho/pinot-noir.png" alt="Garrafa 5" />
+					<p class="wine-name">PINOT NOIR</p>
+					<p class="wine-type">Vinho Tinto</p>
+				</div>
+
+				<div class="wine-item" onclick="sobre_vinhos(`Sauvignon Blanc`)">
+					<img src="assets/imagensPaginaPrincipal/tipos-vinho/sauvignon-blanc.png" alt="Garrafa 6" />
+					<p class="wine-name">SAUVIGNON BLANC</p>
+					<p class="wine-type">Vinho Branco</p>
+				</div>
+				<div class="wine-item" onclick="sobre_vinhos(`Zinfandel`)">
+					<img src="assets/imagensPaginaPrincipal/tipos-vinho/zinfandel.png" alt="Garrafa 7" />
+					<p class="wine-name">ZINFANDEL</p>
+					<p class="wine-type">Vinho Rosé</p>
+				</div>
+				<div class="wine-item" onclick="sobre_vinhos(`Cava`)">
+					<img src="assets/imagensPaginaPrincipal/tipos-vinho/cava.png" alt="Garrafa 8" />
+					<p class="wine-name">CAVA</p>
+					<p class="wine-type">Vinho Espumante</p>
+				</div>
+			</div>
+		</div>
+		<div id="comentarios">
+			<h1>Comentários de Clientes</h1>
+			<div class="secao_comentarios">
+				<div class="imagens_comentario">
+					<img src="assets/imagensPaginaPrincipal/comentarios/sandro.jpg" />
+					<img src="assets/imagensPaginaPrincipal/comentarios/Gabriella.png" />
+					<img src="assets/imagensPaginaPrincipal/comentarios/vivian.jpeg" />
+				</div>
+				<div class="comentario">
+					<div class="dados_comentario">
+						<h4>Sandro</h4>
+						<p>
+							Como viticultor, sempre procurei maneiras de elevar
+							meus vinhos a um patamar superior. A WineTech superou todas
+							as minhas expectativas. Sua tenologia de maturação é uma
+							verdadeira obra-prima da enologia moderna.
+						</p>
+					</div>
+					<div class="dados_comentario">
+						<h4>Gabriella</h4>
+						<p>
+							A WineTech fez da minha jornada na
+							produção de vinhos uma experiência incrível.
+							Sua tecnologia de maturação é simplesmente fenomenal.
+							Ela trouxe consistência e qualidade inigualáveis aos meus vinhos.
+						</p>
+					</div>
+					<div class="dados_comentario">
+						<h4>Vivian</h4>
+						<p>
+							Após a compra do sistema, na minha empresa não teve mais
+							disperdício. Os clientes estão adorando a inovação e estamos
+							produzindo com mais qualidade. Vou implementar nas
+							minhas outras vinícolas e divulgar para meus parceiros.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="simulador">
+			<h2>Simulador Financeiro</h2>
+			<div class="secao_simulador">
+				<img src="assets/imagensPaginaPrincipal/Simulador-Financeiro/simulador.jpg" />
+				<div class="sobre_simulator">
+					<p>
+						O que é nosso <span>Simulador Financeiro?</span><br />
+						Faça um teste agora! <br />
+						<br />
+						<br />
+						Nosso simulador tem como objetivo analisar o contexto do seu
+						negócio e calcular os parâmetros recebidos gerando um relatório de
+						controle.
+					</p>
+					<button class="simule" onclick="chamaModal()">Conheça Agora</button>
+				</div>
+			</div>
+		</div>
+		<div id="secao_video">
+			<video src="assets/imagensPaginaPrincipal/video-vinicola.mp4" type="video/mp4" controls="true">
+		</div>
+	</div>
+	<div id="fale_conosco">
+		<p>Conheça formas de otimizar a produção dos seus vinhos, melhores técnicas de armazenamento e cultivo.</p>
+		<h2>Venha fazer parte da nossa história</h2>
+		<h4 class="cadastrese">Se cadastre preenchendo nosso formulário, e aguarde o contato em até 48 horas.</h4>
+		<div class="contato_formulario">
+			<div class="aside contato">
+				<img src="assets/imagensPaginaPrincipal/contato/garrafa 2.png" class="white_wine">
+				<div class="dados_contato">
+					<p>Qualquer dúvida sobre o nosso projeto, por favor entrar em contato conosco</p>
+					<br>
+					<a href="https://wa.me/5511969141113"><img src="assets/imagensPaginaPrincipal/contato/phone-svg.png"> (11)
+						96914-1113</a>
+					<br>
+					<p><img src="assets/imagensPaginaPrincipal/contato/mail-svg.png"> contato@winetech.com</p>
+					<br>
+					<p><img src="assets/imagensPaginaPrincipal/contato/locate-svg.png"> Rua Haddock Lobo, 595</p>
+				</div>
+			</div>
+			<form action="https://formspree.io/f/mjvqjqey" method="POST" class="aside formulario">
+				<input type="text" placeholder="Nome" class="input nome" name="nome">
+				<input type="email" placeholder="E-mail"  class="input email" name="email'">
+				<input type="tel" placeholder="Telefone com DDD" class="input telefone" name="telefone">
+				<input type="text" placeholder="Assunto" class="input assunto" name="assunto">
+				<input type="text" placeholder="Mensagem" class="input mensagem" name="mensagem">
+				<button type="submit">Enviar</button>
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_box">
+			<div class="valores">
+				<img src="assets/imagensPaginaPrincipal/Logo/logo-wine-tech-versao-white-1.png" class="logo">
+				<p>
+					Nossa Visão é liderar a revolução tecnológica na indústria vinícola, tornando a gestão de
+					temperatura e umidade nas salas de barrica mais acessível e eficiente do que nunca.
+					Queremos ser reconhecidos como o parceiro de confiança dos produtores de vinho em todo o mundo,
+					oferecendo soluções inovadoras que transformam a maneira como o vinho é produzido e envelhecido.</p>
+			</div>
+			<div class="mapa_site">
+				<h3>MAPA DO SITE</h3>
+				<a href="#intro">Inicio</a>
+				<a href="#sobre_nos">Sobre Nós</a>
+				<a href="#controle_vinhos">Controle de Vinhos</a>
+				<a href="#fale_conosco">Fale Conosco</a>
+			</div>
+			<div class="footer_contato">
+				<h3>CONTATO</h3>
+				<br>
+				<p>Rua Haddock Lobo, 595 - São Paulo</p>
+				<br>
+				<a href="https://wa.me/5511969141113">Telefone: +55 11 96914-1113</a>
+				<p>E-mail: contato@winetech.com</p>
+				<div class="redes_sociais">
+					<a href="#">
+						<img src="assets/imagensPaginaPrincipal/midias-sociais/facebook.png" />
+					</a>
+					<a href="#">
+						<img src="assets/imagensPaginaPrincipal/midias-sociais/instagram.png" />
+					</a>
+					<a href="#">
+						<img src="assets/imagensPaginaPrincipal/midias-sociais/linkedin.png" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer_copyright">
+			<p>Copyright 2023 - Todos os Direitos Reservados</p>
+		</div>
+	</div>
+	</div>
+</body>
+
+</html>
+
+<script src="js/script.js">
+</script>
